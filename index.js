@@ -34,8 +34,14 @@ console.log('checkMultiplicity(15,4)=false=', checkMultiplicity(15, 4));
  * @returns {boolean} (a+b)>c
  */
 function triangle(a, b, c) {
-    return (((a + b) > c) && ((a + c) > b) && ((c + b) > a));
+    if (!(isNaN(a) || isNaN(b) || isNaN(c))) {
+        a=Number(a);
+        b=Number(b);
+        c=Number(c);
+        return (((a + b) > c) && ((a + c) > b) && ((c + b) > a));
+    }
 }
 
+console.log('triangle("a",4,5)=undefined=', triangle('a', 4, 5));
 console.log('triangle(3,4,5)=true=', triangle(3, 4, 5));
 console.log('triangle(3,4,9)=false=', triangle(3, 4, 9));
