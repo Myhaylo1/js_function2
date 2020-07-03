@@ -80,10 +80,24 @@ console.log('The second equation: squareRhombus(2,1,pi/2)=1=', squareRhombus(2, 
 function squareCylinder(r, h) {
     if (!(isNaN(r) || isNaN(h))) {
         r = Number(r);
-        return (2*Math.PI*r*Number(h)+Math.PI*r*r);
+        return (2 * Math.PI * r * Number(h) + Math.PI * r * r);
     }
 }
 
 console.log('squareCylinder("a",3)=undefined=', squareCylinder('a', 3));
 console.log('squareRhombus(1,1)=3*pi=', squareCylinder(1, 1));
 
+/**
+ *
+ * @param a
+ * @param b
+ * @param alfa
+ * @returns {number}
+ */
+function squareTriangle(a, b, alfa) {
+    if (!(isNaN(a) || isNaN(b) || isNaN(alfa))) {
+        return (Number(a) * Number(b) * Math.sin(Number(alfa)) / 2);
+    }
+}
+
+console.log('squareTriangle(3,4,pi/2)=6=', squareTriangle(3, 4, Math.PI / 2));
